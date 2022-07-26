@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #1d2d3c;
+}
+
+/* HEADER */
+header {
+    background-color: #2E3A46;
+}
+
+header img {
+    height: 55px;
+}
+
+/* MAIN */
+main .container {
+    width: 70%;
+}
+
+/* CARD */
+.album-card {
+    background-color: #2E3A46;
+}
+
+.album-card .subtitle,
+.album-card .date {
+    color: gray;
+}
