@@ -7,7 +7,7 @@ const App = new Vue(
         created() {
             axios.get('http://localhost:8888/php-ajax-dischi/milestone-2/api.php')
                 .then((result) => {
-                    this.albums = result.data.results;
+                    this.albums = result.data;
                 })
                 .catch((error) => { console.log(error); });
         }
