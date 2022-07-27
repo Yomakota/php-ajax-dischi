@@ -9,7 +9,7 @@ const App = new Vue(
                 .then((result) => {
                     this.albums = result.data;
                 })
-                .catch((error) => { console.log(error); });
+                .catch((error) => { console.log(error) });
         }
     }
 );
