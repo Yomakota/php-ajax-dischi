@@ -7,18 +7,10 @@ const App = new Vue(
             valueSelect: 'All',
             authors: [],
             authorSelect: 'All',
-            url: 'http://localhost:8888/php-ajax-dischi/bonus/api.php',
             url_genre: 'http://localhost:8888/php-ajax-dischi/bonus/apiGenre.php?genre=',
             url_author: 'http://localhost:8888/php-ajax-dischi/bonus/apiAuthor.php?author=',
         },
         methods: {
-            printCards() {
-                axios.get(this.url)
-                    .then((result) => {
-                        this.albums = result.data;
-                    })
-                    .catch((error) => { console.log(error) });
-            },
             changeGenre() {
                 axios.get(`${this.url_genre}${this.valueSelect}`)
                     .then((result) => {
@@ -45,7 +37,6 @@ const App = new Vue(
             },
         },
         created() {
-            this.printCards();
             this.changeGenre();
             this.changeAuthor();
         }
